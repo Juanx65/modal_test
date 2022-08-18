@@ -21,20 +21,9 @@ import ModalBody from '../components/ModalBody';
 const data = [
 
   {
-    name: "alguna wea",
-    text: "aahjajsahsajshajs",
-    avatar: "../../public/assets/icon/icon.png"
-  },
-  {
-    name: "alguna wea",
-    text: "aahjajsahsajshajs",
-    avatar: "../../public/assets/icon/icon.png"
-  },
-  {
-    name: "alguna wea",
-    text: "aahjajsahsajshajs",
-    avatar: "../../public/assets/icon/icon.png"
-  },
+    periodo: "01-10-2022",
+    monto: "$350.000"
+  }
 ];
 
 
@@ -43,13 +32,11 @@ function Home() {
 
   const [present, dismiss] = useIonModal(ModalBody, {
     dismiss: () => dismiss(),
-    data: data
+    data: data,
+    id:"example-modal"
   });
   const modalOptions = {
     onDidDismiss: () => dismiss(),
-    breakpoints: [0,0.2,0.5,1],
-    initialBreakpoint: 0.5,
-    backdropBreakpoint:0.2
   };
 
   return (
